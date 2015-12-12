@@ -1,22 +1,12 @@
-<html>
-	<head>
-		<title> MdeNoche Learns Django!</title>
-	</head>
-	<body>
-		<div>
-		<h1>Mdenoche Learns Django!</h1>
-		<br />
+{% extends 'blog/base.html' %}
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title}}</a></h2>
+				<div class="date">
+					<p>published: {{post.published_date}}</p>
+				</div>
+			<p>{{ post.text|linebreaks}}</p>
 		</div>
-		<div>
-		<h2>So far, so good!</h2>
-		<p> Hello! Follow me on twitter <a href="https://twitter.com/mdenoche">@mdenoche</a>
-		</p>
-		<br />
-		</div>
-		{% for post in posts %}
-		<div>
-		<h1><a href"">{{ post.title }}</a></h1>
-		<p>published: {{post.published_date}}</p>
-		<p>{{ post.text|linebreaks}}</p>
-		</div>
-		{% endfor %}
+	{% endfor %}
+{% endblock %}

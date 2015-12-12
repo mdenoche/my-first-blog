@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+		<link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+		<title> MdeNoche Learns Django!</title>
+	</head>
+	<body>
+		<div class="page-header">
+		<h1><a href="/">Mdenoche Learns Django!</a></h1>
+		</div>
+		<div class="twitter-follow">
+		<h4>So far, so good!</h4>
+		<p> Hello! Follow me on twitter <a href="https://twitter.com/mdenoche">@mdenoche</a></p>
+		<br />
+		</div>
+			<div class="content container">
+			<div class="row">
+			<div class="col-md-8">
+				{% block content %}
+					<div class="post">
+						<h2><a href"">{{ post.title }}</a></h2>
+					<div class="date">
+						<p>published: {{post.published_date}}</p>
+					</div>
+				<p>{{ post.text|linebreaks}}</p>
+		</div>
+		{% endblock %}

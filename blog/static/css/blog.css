@@ -1,0 +1,19 @@
+.page-header { 
+    background-color: #C4C4C4;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px; 
+}
+.twitter-follow {
+	padding-left: 35px;
+}
+h1 a { 
+	color: #C22976;
+	font-family: 'font-family: 'Exo 2', sans-serif;'
+}
+.post {
+	padding-left: 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+h2 a {
+	color: #C084E8;
+}
